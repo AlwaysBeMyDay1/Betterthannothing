@@ -18,9 +18,10 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import include
+from calculator import urls
+from calculator import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('calculator/', include('calculator.urls'))
-]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('calculator/', include('calculator.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
