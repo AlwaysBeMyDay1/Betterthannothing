@@ -9,4 +9,4 @@ def peek(request):
     items_plastic = item.objects.filter(type='plastic')
     items_paper = item.objects.filter(type='paper')
     items_else = item.objects.filter(type='else')
-    return render(request, 'peek.html', {'metal': items_metal,  'glass': items_glass, 'plastic': items_plastic, 'paper': items_paper, 'etc': items_else})
+    return render(request, 'calculator/peek.html', {'metal': items_metal, 'glass': items_glass, 'plastic': items_plastic, 'paper': items_paper, 'etc': items_else})

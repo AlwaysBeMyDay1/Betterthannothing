@@ -6,6 +6,8 @@ from django.db.models.deletion import CASCADE
 class Character(models.Model):
     pass
 
+# 소개글 따로 하게.. 레벨,,,
+
 
 class User(AbstractUser):
     # 기본 User 모델은 username, email, password, last_login 등 제공
