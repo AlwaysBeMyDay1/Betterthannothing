@@ -28,5 +28,5 @@ urlpatterns = [
     path('calculator/', include('calculator.urls')),
     path('common/', include('common.urls')),
     # path('', common_view.test, name='test')
-    path('', main_view.home, name='home')
+    path('', main_view.home, name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
