@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Better Than Nothing
+{% endblock title %}
+
+{% block content %}
+{% if user.is_authenticated %}
+{{user.username}} 님 반갑습니다!
+{% endif %}
+<a href="{% url 'common:login' %}">로그인</a>
+<a href="{% url 'common:logout' %}">로그아웃</a>
+<a href="{% url 'common:register' %}">회원가입</a>
+
+
+{% endblock content %}

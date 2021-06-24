@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+분리수거 계산기
+{% endblock title %}
+
+{% block content %}
+<div class="cal__title">
+    <h3>분리수거 계산기</h3>
+    <p>여러분의 분리수거로 남는 전력</p>
+</div>
+<div class="item__list">
+    <ul class="main">
+        <li>플라스틱
+            <div class="menu">
+                <ul class="sub">
+                    {% for item in plastic %}
+                    <li>
+                        <div class="add_btn">
+                            <button type="button" class="{{item.kwh}}"><img src="{{item.image.url}}"
+                                    width="50px">{{item.name}}</button>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+        <li>유리
+            <div class="menu">
+                <ul class="sub">
+                    {% for item in glass %}
+                    <li>
+                        <div class="add_btn">
+                            <button type="button" class="{{item.kwh}}"><img src="{{item.image.url}}"
+                                    width="50px">{{item.name}}</button>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+        <li>금속
+            <div class="menu">
+                <ul class="sub">
+                    {% for item in metal %}
+                    <li>
+                        <div class="add_btn">
+                            <button type="button" class="{{item.kwh}}"><img src="{{item.image.url}}"
+                                    width="50px">{{item.name}}</button>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+        <li>종이
+            <div class="menu">
+                <ul class="sub">
+                    {% for item in paper %}
+                    <li>
+                        <div class="add_btn">
+                            <button type="button" class="{{item.kwh}}"><img src="{{item.image.url}}"
+                                    width="50px">{{item.name}}</button>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+        <li>이외
+            <div class="menu">
+                <ul class="sub">
+                    {% for item in etc %}
+                    <li>
+                        <div class="add_btn">
+                            <button type="button" class="{{item.kwh}}"><img src="{{item.image.url}}"
+                                    width="50px">{{item.name}}</button>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="peek__items">
+    <div class="bucket">
+        <table class="item__table" border="0" cellspacing="0" cellpadding="0">
+            <tr bgcolor="#C8E3FF">
+                <th scope="col">&nbsp;</th>
+                <th scope="col">&nbsp;</th>
+                <th scope="col">수량</th>
+                <th scope="col">종류</th>
+                <th scope="col">&nbsp;</th>
+            </tr>
+            <tr align="center" class="good1">
+                <td><a href="#"><img src="{% static 'img/tumbler.png' %}" width="75" height="75" alt="텀블러" /></a></td>
+                <td>텀블러</td>
+                <td>1</td>
+                <td>고철</td>
+                <td><button type="button" title="삭제" class="btn_del">삭제</button></td>
+            </tr>
+            <tr align="center" class="good1">
+                <td><a href="#"><img src="{% static 'img/tumbler.png' %}" width="75" height="75" alt="텀블러" /></a></td>
+                <td>텀</td>
+                <td>1</td>
+                <td>철</td>
+                <td><button type="button" title="삭제" class="btn_del">삭제</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="total">
+        <h3>총 전력량</h3>
+        <!-- 임시로 해놓고 결과 확인 -->
+        <div class="show_total">
+            1000 kWh
+        </div>
+        <!-- 이 위까지는 없어질 친구덜 -->
+        <div id="result">
+            <button type="button" title="결과 확인하기" id="btn_result">결과 확인하기</button>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}
