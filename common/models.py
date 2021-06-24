@@ -6,12 +6,10 @@ from django.db.models.deletion import CASCADE
 class Character(models.Model):
     pass
 
-# 소개글 따로 하게.. 레벨,,,
-
 
 class User(AbstractUser):
     # 기본 User 모델은 username, email, password, last_login 등 제공
-    # 성별과 마일리지, 캐릭터 추가
+    # 성별과 마일리지, 레벨, 소개글, 캐릭터 추가
     GENDER_MALE = 0
     GENDER_FEMALE = 1
     GENDER_UNKNOWN = 2
@@ -19,7 +17,10 @@ class User(AbstractUser):
     name = models.CharField(blank=False, null=False, max_length=100)
     nickname = models.CharField(blank=False, null=False, max_length=100)
     gender = models.IntegerField(choices=GENDER_CHOICES, blank=False, null=False, default=3)
+    email = models.EmailField(null=False, blank=False)
     mileage = models.PositiveIntegerField(default=0)
+    level = models.PositiveSmallIntegerField(default=1)
+    content = models.TextField(default='소개글이 없습니다.')
     # character = models.OneToOneField(Character, on_delete=CASCADE)
 
 

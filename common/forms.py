@@ -20,10 +20,12 @@ class RegisterForm(UserCreationForm):
         self.fields['name'].help_text = '<ul><li>이름을 입력해주세요.</li></ul>'
         self.fields['nickname'].label = '닉네임'
         self.fields['nickname'].help_text = '<ul><li>사용할 별명을 입력해주세요.</li></ul>'
+        self.fields['email'].label = '이메일 주소'
+        self.fields['content'].label = '소개글'
 
     class Meta:
         model = User
-        fields = ['username', 'password1', 'password2', 'name', 'nickname', 'gender']
+        fields = ['username', 'password1', 'password2', 'email', 'name', 'nickname', 'content', 'gender']
         widgets = {
             # 'username': forms.TextInput(attrs={'placeholder': '15자 이내로 입력 가능합니다.'}),
             # 'password1': ,
