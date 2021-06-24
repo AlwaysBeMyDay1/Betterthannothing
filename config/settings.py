@@ -9,9 +9,10 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'calculator',
     'common',
+    'mainapp',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +133,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'mainapp', 'static')
+]  # static 파일들이 어디에 있는지를 쓰는곳
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # static 파일들이 어디로 모일 것인지를 쓰는 곳
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
