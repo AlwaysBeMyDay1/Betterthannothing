@@ -39,9 +39,24 @@
                 <li><a href=""><img src="{% static 'img/recycle.png' %}">환경을 생각하는 기업</a></li>
             </ul>
         </div>
+
+        {% if user.is_authenticated %}
         <div class="user__profile">
             <img src="{% static 'img/circle.png' %}">
+            {{user.name}}
+            <a href="{% url 'common:logout' %}">로그아웃</a>
         </div>
+        {% endif %}
+
+        {% if not user.is_authenticated %}
+        <div class="user__profile">
+            <a href="{% url 'common:login' %}">로그인</a>
+            <a href="{% url 'common:register' %}">회원가입</a>
+        </div>
+        {% endif %}
+
+
+
     </header>
     <section id="container">
         {% block content %}

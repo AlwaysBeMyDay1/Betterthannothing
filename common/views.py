@@ -9,7 +9,7 @@ def test(request):
 
 def logout_(request):
     logout(request)
-    return redirect('test')
+    return redirect('home')
 
 
 def register(request):
@@ -18,7 +18,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-        return redirect('test')
+        return redirect('home')
     else:
         form = RegisterForm()
         return render(request, 'common/register.html', {'form': form})
