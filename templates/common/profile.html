@@ -5,10 +5,17 @@
 {% block content %}
 {{user.name}}
 {{user.nickname}}
-{{user.gender}}
 {{user.email}}
 {{user.content}}
 {{user.milage}}
 {{user.level}}
-{{user.gender}}
+{% if user.gender is 0 %}
+남성
+{% endif %}
+{% if user.gender is 1 %}
+여성
+{% endif %}
+{% if user.gender is 2 %}
+숨김
+{% endif %}
 {% endblock content %}
