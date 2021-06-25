@@ -87,7 +87,7 @@ p {
 
 .main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -243,6 +243,11 @@ p {
 
 .item__list .sub li button:hover {
   color: orangered;
+}
+
+ul.main {
+  display: flex;
+  flex-direction: row;
 }
 
 /* Peek__items */
