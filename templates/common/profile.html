@@ -1,5 +1,21 @@
 {% extends 'base.html' %}
-
+{% block title %}
+{{user.name}}님의 프로필
+{% endblock title %}
 {% block content %}
-
+{{user.name}}
+{{user.nickname}}
+{{user.email}}
+{{user.content}}
+{{user.milage}}
+{{user.level}}
+{% if user.gender is 0 %}
+남성
+{% endif %}
+{% if user.gender is 1 %}
+여성
+{% endif %}
+{% if user.gender is 2 %}
+숨김
+{% endif %}
 {% endblock content %}

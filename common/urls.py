@@ -8,5 +8,5 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='common/login.html'), name='login'),
     path('logout/', views.logout_, name='logout'),
     path('register/', views.register, name='register'),
-    # path('profile/<str:id>')
+    path('profile/<str:id>', views.profile, name='profile'),
 ]
