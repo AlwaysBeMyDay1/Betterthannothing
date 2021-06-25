@@ -22,3 +22,7 @@ def register(request):
     else:
         form = RegisterForm()
         return render(request, 'common/register.html', {'form': form})
+    
+def profile(request, id):
+    user = User.objects.get(id=id)
+    return render(request, 'common/profile.html', {'user': user})

@@ -42,7 +42,9 @@
 
         {% if user.is_authenticated %}
         <div class="user__profile">
+        <a href="{% url 'common:profile' user.id %}">
             <img src="{% static 'img/circle.png' %}">
+        </a>
             {{user.name}}
             <a href="{% url 'common:logout' %}">로그아웃</a>
         </div>
