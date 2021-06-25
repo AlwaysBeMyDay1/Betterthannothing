@@ -8,30 +8,24 @@ h1 {
   font-size: 36px;
 }
 
-ul,
-li,
-ol {
+ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 a {
   text-decoration: none;
   color: black;
 }
-button {
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
+p{
+  font-size:18px;
 }
 
 /* HTML */
 
-header {
+#navbar_top {
   align-items: center;
   text-align: center;
+
   padding: 5px 50px;
   display: flex;
   justify-content: space-between;
@@ -58,11 +52,13 @@ header {
 }
 
 .navbar ul li {
-  display: flex;
   margin: 0 50px;
   font-size: 14px;
+}
+.navbar ul a {
   justify-content: center;
   align-items: center;
+  display: flex;
 }
 
 .navbar ul a img {
@@ -74,9 +70,87 @@ header {
   height: 30px;
 }
 
+.navbar ul li a p{
+  font-size:14px;
+}
 .user__profile img {
   width: 30px;
   height: 30px;
+}
+
+/* section */
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .main  */
+.out{
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.count, .count__tree{
+  display:flex;
+}
+
+.count #line2-1, .count #line2-2{
+  color:chocolate;
+  font-weight: bolder;
+  font-size:24px;
+  margin: 0 3px;
+}
+
+.count #line2-2{
+  color:black;
+}
+.count__tree #line4-2{
+  color:blue;
+  margin-left:3px;
+  margin-right:3px;
+
+}
+.tree{
+  z-index: 3;
+  position: absolute;
+  display: flex;
+  flex: row;
+  align-items: center;
+  justify-content: center;
+}
+.trees img{
+  width:200px;
+}
+
+.trees{
+  position: relative;
+  display:flex;
+  flex-direction: row;
+  width:240px;
+}
+#tree1{
+  position: absolute;
+  z-index:3;
+}
+#tree2{
+  position: absolute;
+  left:40px;
+  z-index:2;
+}
+
+.ground{
+  z-index:1;
+  position: absolute;
+  top:300px;
+  width:100%;
+  height:200px;
+  background-color: rgb(136, 90, 38);
+  border-radius: 100% 100% 0px 0px; 
 }
 
 /* container */
@@ -193,7 +267,3 @@ background-color:#f96;
 .item__table tr:ntn-child(odd){
   background-color: #eefafd;;
 }
-
-
-
-

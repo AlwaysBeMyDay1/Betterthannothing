@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* typo */
+h1 {
+  font-size: 36px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* HTML */
+
+#navbar_top {
+  align-items: center;
+  text-align: center;
+
+  padding: 5px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__icon {
+  align-items: center;
+  display: flex;
+
+}
+
+.main__icon img {
+  margin-right: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.main__icon h1 {
+  color: rgb(255, 196, 0);
+  font-size: 24px;
+}
+
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 50px;
+  font-size: 14px;
+}
+
+.navbar ul a {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.navbar ul a img {
+  padding-right: 12px;
+}
+
+.navbar ul li img {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar ul li a p {
+  font-size: 14px;
+}
+
+.user__profile img {
+  width: 30px;
+  height: 30px;
+}
+
+/* section */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .main  */
+.out {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.count,
+.count__tree {
+  display: flex;
+}
+
+.count #line2-1,
+.count #line2-2 {
+  color: chocolate;
+  font-weight: bolder;
+  font-size: 24px;
+  margin: 0 3px;
+}
+
+.count #line2-2 {
+  color: black;
+}
+
+.count__tree #line4-2 {
+  color: blue;
+  margin-left: 3px;
+  margin-right: 3px;
+
+}
+
+.tree {
+  z-index: 3;
+  position: absolute;
+  display: flex;
+  flex: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.trees img {
+  width: 200px;
+}
+
+.trees {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 240px;
+}
+
+#tree1 {
+  position: absolute;
+  z-index: 3;
+}
+
+#tree2 {
+  position: absolute;
+  left: 40px;
+  z-index: 2;
+}
+
+.ground {
+  z-index: 1;
+  position: absolute;
+  top: 300px;
+  width: 100em;
+  height: 200px;
+  background-color: rgb(136, 90, 38);
+  border-radius: 100% 100% 0px 0px;
+}
+
+/* container */
+#container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* category */
+.cal__title {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.item__list {
+  height: 80px;
+}
+
+.item__list .main {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.item__list .main>li {
+  float: left;
+  width: 20%;
+  height: 80px;
+  line-height: 50px;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+.item__list .main>li:hover .menu {
+  display: block;
+}
+
+.item__list .menu {
+  position: absolute;
+  padding-top: 95px;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.item__list .sub {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.item__list .sub li {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.add_btn button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item__list .sub li button:hover {
+  color: orangered;
+}
+
+/* Peek__items */
+.peek__items {
+  justify-content: center;
+  position: relative;
+  top: 300px;
+}
+
+.bucket {
+  width: 1200px;
+  height: 600px;
+  background-color: #f96;
+}
+
+.item__table {
+  width: 100%;
+  line-height: 50px;
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-collapse: collapse;
+}
+
+.item__table th,
+.item__table td {
+  color: #678197;
+  text-align: center;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.item__table th {
+  background-color: #eeeeee;
+}
+
+.item__table tr {
+  background-color: #fff;
+}
+
+.item__table tr:ntn-child(odd) {
+  background-color: #eefafd;
+  ;
+}
