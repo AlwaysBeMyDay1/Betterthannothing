@@ -12,8 +12,9 @@
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mainstyle.css' %}">
     <link rel="shortcut icon" href="{% static 'favicon/favicon.ico'%}" />
+
     <title>
         {% block title %}
 
@@ -24,41 +25,37 @@
 
 <body>
     <header>
-        <div class="main__icon">
-            <a href="{% url 'home'%}">
-                <img src="{% static 'img/sprout.png' %}">
-                <h1>Better than Nothing</h1>
-
-            </a>
-        </div>
+        
         <div class="navbar">
+            <div class="main__icon">
+                <a href="{% url 'home'%}">
+                    <img src="{% static 'img/sprout.png' %}">
+                </a>
+                    <h1>Better than Nothing</h1>
+            </div>
             <ul>
                 <li><a href=""><img src="{% static 'img/tumbler.png' %}">오늘의 분리수거</a></li>
                 <li><a href="{% url 'calculator:home' %}"><img src="{% static 'img/lunch_box.png' %}">분리수거 계산기</a></li>
                 <li><a href=""><img src="{% static 'img/cycle_box.png' %}">챌린지</a></li>
                 <li><a href=""><img src="{% static 'img/recycle.png' %}">환경을 생각하는 기업</a></li>
             </ul>
-        </div>
+            {% if user.is_authenticated %}
+            <div class="user__profile">
+            <a href="{% url 'common:profile' user.id %}">
+                <img src="{% static 'img/circle.png' %}">
+            </a>
+                {{user.name}}
+                <a href="{% url 'common:logout' %}">로그아웃</a>
+            </div>
+            {% endif %}
 
-        {% if user.is_authenticated %}
-        <div class="user__profile">
-        <a href="{% url 'common:profile' user.id %}">
-            <img src="{% static 'img/circle.png' %}">
-        </a>
-            {{user.name}}
-            <a href="{% url 'common:logout' %}">로그아웃</a>
-        </div>
-        {% endif %}
-
-        {% if not user.is_authenticated %}
-        <div class="user__profile">
-            <a href="{% url 'common:login' %}">로그인</a>
-            <a href="{% url 'common:register' %}">회원가입</a>
-        </div>
-        {% endif %}
-
-
-
+            {% if not user.is_authenticated %}
+            <div class="user__profile">
+                <a href="{% url 'common:login' %}">로그인</a>
+                <a href="{% url 'common:register' %}">회원가입</a>
+            </div>
+            {% endif %}
+        </div>    
     </header>
     <section id="container">
         {% block content %}
