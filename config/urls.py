@@ -22,11 +22,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
+from instruction import views
+from instruction import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('calculator/', include('calculator.urls')),
     path('common/', include('common.urls')),
+    path('instruction/', include('instruction.urls')),
     # path('', common_view.test, name='test')
     path('', main_view.home, name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
