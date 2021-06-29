@@ -5,5 +5,5 @@ from . import views
 app_name = 'instruction'
 
 urlpatterns = [
-    path('way/', views.way, name='way'),
+    path('', views.way, name='way'),
 ]
