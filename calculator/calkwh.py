@@ -43,7 +43,7 @@ def calculate_savings(recyclelist):
     }
     sum = 0
     for items, nums in recyclelist:
-        sum += ((product[items][0] * nums) * energy_consumed_or_avoided_compared_to_landfilling[product[items][1]] * 1000)
+        sum += ((product[items][0] * float(nums)) * energy_consumed_or_avoided_compared_to_landfilling[product[items][1]] * 1000)
     return sum
 
 

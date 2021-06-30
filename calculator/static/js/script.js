@@ -12,19 +12,21 @@ function addItem(clicked_id){
         cell1.appendChild(element1);
         // 이름
         cell2 = row.insertCell(1);
-        // element2 = document.createTextNode(clicked_id);
         element2 = document.createElement("input");
-        element2.type = "text";
-
+        element2.readOnly = "readonly";
+        element2.value = clicked_id;
+        element2.className = "item_name_input";
+        element2.id = clicked_id;
+        element2.name = "name";
         cell2.appendChild(element2);
         // 수량
         cell3 = row.insertCell(2);
-        // element3 = document.createTextNode("1");
         element3 = document.createElement("input");
         element3.type = "number";
         element3.id = clicked_id+"1";
         element3.value = 1;
         element3.min = "1";
+        element3.name = "nums";
         cell3.appendChild(element3);
         // 종류
         cell4 = row.insertCell(3);
@@ -46,10 +48,10 @@ function addItem(clicked_id){
 function deleteItem(clicked_id){
     tbody = document.getElementById("table-body");
     rowcnt = tbody.rows.length;
-    for(var i = 0; i < rowcnt; i++){
-        var row = tbody.rows[i];
-        var rowObj = row.cells[1].childNodes[0].textContent;
-        if(rowObj == clicked_id){
+    for(let i = 0; i < rowcnt; i++){
+        let row = tbody.rows[i];
+        let rowObj = row.cells[1].childNodes[0];
+        if(rowObj.id == clicked_id){
             tbody.deleteRow(i);
             rowcnt--;
             break;

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+계산 결과
+{% endblock title %}
+
+{% block content %}
+<input type="hidden" value="{{kwh}}">
+{{kwh}}kWh를 아끼셨습니다!
+<button></button>
+{% endblock content %}
