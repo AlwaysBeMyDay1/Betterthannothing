@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 {{user.name}}님의 프로필
 {% endblock title %}
@@ -10,7 +11,23 @@
     </div>
     <div class="profile_content">
         <div class="profile_content_img">
-            <div class="img">저는 여기에 현직님이 그리신 레벨 이미지가 들어갔으면 좋겠습니다..ㅎ</div>
+            {% if user.level == 1 %}
+            <img src="{% static 'img/level1.png' %}">
+            {% endif %}
+            {% if user.level == 2 %}
+            <img src="{% static 'img/level2.png' %}">
+            {% endif %}
+            {% if user.level == 3 %}
+            <img src="{% static 'img/level3.png' %}">
+            {% endif %}
+            {% if user.level == 4 %}
+            <img src="{% static 'img/level4.png' %}">
+            {% endif %}
+            {% if user.level == 5 %}
+            <img src="{% static 'img/level5.png' %}">
+            {% endif %}
+
+
         </div>
         <table id="profile_content_table">
             <tr>
@@ -31,7 +48,7 @@
             </tr>
             <tr>
                 <td class="type">마일리지</td>
-                <td class="content">{{user.milage}}</td>
+                <td class="content">{{user.mileage}}</td>
             </tr>
             <tr>
                 <td class="type">레벨</td>
