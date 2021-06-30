@@ -36,7 +36,7 @@
             <ul>
                 <li><a href="{% url 'instruction:way' %}"><img src="{% static 'img/tumbler.png' %}">오늘의 분리수거</a></li>
                 <li><a href="{% url 'calculator:home' %}"><img src="{% static 'img/lunch_box.png' %}">분리수거 계산기</a></li>
-                <li><a href=""><img src="{% static 'img/cycle_box.png' %}">챌린지</a></li>
+                <li><a href="{% url 'challenge:chhome' %}"><img src="{% static 'img/cycle_box.png' %}">챌린지</a></li>
                 <li><a href=""><img src="{% static 'img/recycle.png' %}">환경을 생각하는 기업</a></li>
             </ul>
             {% if user.is_authenticated %}
@@ -63,7 +63,7 @@
     </section>
     <section id="container2">
         {% block content2 %}
-        
+
         {% endblock %}
     </section>
 </body>

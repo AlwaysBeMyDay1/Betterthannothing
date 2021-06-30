@@ -9,7 +9,7 @@ Better than Nothing
 <div class="chhome">
     <div class="chhome_title">
         <h1>Better Than Nothing</h1>
-    
+
     </div>
     <div class="chhome_chcon">
         <div class="chhome_left">
@@ -38,31 +38,7 @@ Better than Nothing
                         <p>용기내</p>
                         <p>10/100</p>
                     </div>
-                    <button type="submit">참여하기</button>
-                </div>
-                <div class="chhome_chas">
-                    <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
-                    <div class="chtext">
-                        <p>용기내</p>
-                        <p>10/100</p>
-                    </div>
-                    <button type="submit">참여하기</button>
-                </div>
-                <div class="chhome_chas">
-                    <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
-                    <div class="chtext">
-                        <p>용기내</p>
-                        <p>10/100</p>
-                    </div>
-                    <button type="submit">참여하기</button>
-                </div>
-                <div class="chhome_chas">
-                    <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
-                    <div class="chtext">
-                        <p>용기내</p>
-                        <p>10/100</p>
-                    </div> 
-                    <button type="submit">참여하기</button>
+                    <button type="submit" id="info___button">참여하기</button>
                 </div>
                 <div class="chhome_chas">
                     <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
@@ -88,11 +64,41 @@ Better than Nothing
                     </div>
                     <button type="submit">참여하기</button>
                 </div>
-             
+                <div class="chhome_chas">
+                    <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
+                    <div class="chtext">
+                        <p>용기내</p>
+                        <p>10/100</p>
+                    </div>
+                    <button type="submit">참여하기</button>
+                </div>
+                <div class="chhome_chas">
+                    <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
+                    <div class="chtext">
+                        <p>용기내</p>
+                        <p>10/100</p>
+                    </div>
+                    <button type="submit">참여하기</button>
+                </div>
+                <div class="chhome_chas">
+                    <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
+                    <div class="chtext">
+                        <p>용기내</p>
+                        <p>10/100</p>
+                    </div>
+                    <button type="submit">참여하기</button>
+                </div>
+
             </div>
         </div>
     </div>
-    
+
 </div>
+<script>
+    document.getElementById("info___button").onclick = function () { gotoInfo() };
+    function gotoInfo() {
+        window.open("/challenge/info", "_self");
+    }
+</script>
 
 {% endblock content2 %}
