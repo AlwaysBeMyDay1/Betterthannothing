@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'common',
     'mainapp',
     'instruction',
+    'challenge',
 ]
 
 MIDDLEWARE = [
@@ -126,7 +127,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'calculator', 'static'),
-    os.path.join(BASE_DIR,'instruction','templates'),
+    os.path.join(BASE_DIR, 'instruction', 'templates'),
     os.path.join(BASE_DIR, 'mainapp', 'static'),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

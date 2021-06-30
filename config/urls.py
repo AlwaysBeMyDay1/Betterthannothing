@@ -14,22 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from mainapp import views as main_view
-from common import views as common_view
-from calculator import views as calculator_view
-from calculator import urls
 from django.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from instruction import views
-from instruction import urls
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('calculator/', include('calculator.urls')),
     path('common/', include('common.urls')),
     path('instruction/', include('instruction.urls')),
+    path('challenge/', include('challenge.urls')),
     # path('', common_view.test, name='test')
     path('', main_view.home, name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
