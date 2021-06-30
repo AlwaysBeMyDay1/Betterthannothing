@@ -1,48 +1,53 @@
-
+{% extends 'base.html' %}
 {% block title %}
-    Challenges
+Challenges
 {% endblock title %}
-    
 
 {% block content %}
+<div class="ch_info_container">
     <div class="chinfo_top">
+        <div class="chinfo_top_img">
+        </div>
         <div class="chinfo_top_name">
             <h1>용기내 챌린지</h1>
         </div>
         <div class="chinfo_top_info">
-            <p>챌린지 내용</p>
+            <p>환경을 위해 개인용기로 물건을 사는 사진을 찍어 올려주세요!</p>
         </div>
-        <div class="chinfo_top_participate">
-            <div class="object">
-                <p>용기내기</p>
+        <div class="chinfo_top_detail">
+            <div class="detail_content">
+                <p id="type">목표 인원</p>
+                <p id="people">100명</p>
             </div>
-            <div class="num">
-                <p>100명</p>
+            <div class="detail_content">
+                <p id="type">기간</p>
+                <p id="period">2021년 6월 30일 ~ 한 달 간</p>
             </div>
-            <div class="period">
-                <p>2021년 6월 30일 ~ 한 달 간</p>
-            </div>
-        </div>
-        <div class="chinfo_top_button">
-            <button>참여하기</button>
-        </div>
-
-        <div class="chinfo_bottom">
-            <div class="chinfo_bottom_title">
-                <h2>다른 사람들은?</h2>
-            </div>
-            <div class="chinfo_bottom_others">
-                <ul>
-                    <li class="content"></li>
-                    <li class="content"></li>
-                    <li class="content"></li>
-                    <li class="content"></li>
-                    <li class="content"></li>
-                    <li class="content"></li>
-                    <li class="content"></li>
-                    <li class="content"></li>
-                </ul>
+            <div class="chinfo_top_button">
+                <button>참여하기</button>
             </div>
         </div>
     </div>
+    <div class="chinfo_bottom">
+        <div class="chinfo_bottom_title">
+            <h2>함께하는 사람들</h2>
+        </div>
+        <div class="chinfo_bottom_others">
+            <ul>
+                <li class="content">
+                    <div class="others_content_box">5</div>
+                    <div class="others_content_box">5</div>
+                    <div class="others_content_box">5</div>
+                    <div class="others_content_box">5</div>
+                </li>
+                <li class="content">
+                    <div class="others_content_box">6</div>
+                    <div class="others_content_box">6</div>
+                    <div class="others_content_box">6</div>
+                    <div class="others_content_box">6</div>
+                </li>
+        </div>
+    </div>
+</div>
+
 {% endblock content %}
