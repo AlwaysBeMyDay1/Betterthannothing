@@ -12,73 +12,107 @@
 </div>
 <div class="item__list">
     <ul class="main">
-        <li>플라스틱
+        <li><span>플라스틱</span>
             <div class="menu">
                 <ul class="sub">
-                    {% for item in plastic %}
                     <li>
-                        <div class="add_btn">
-                            <button type="button" class="{{item.kwh}}"><img src="{{item.image.url}}"
-                                    width="50px">{{item.name}}</button>
-                        </div>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="플라스틱 우유병">
+                            <img src="{% static 'img/bottle.png' %}" width="50px">플라스틱 우유병
+                        </button>
                     </li>
-                    {% endfor %}
+                    <li>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="플라스틱 세제통">
+                            <img src="{% static 'img/bottle.png' %}" width="50px">플라스틱 세제통
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="500ml 페트병">
+                            <img src="{% static 'img/bottle.png' %}" width="50px">500ml 페트병
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="2L 페트병">
+                            <img src="{% static 'img/bottle.png' %}" width="50px">2L 페트병
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="비닐봉지">
+                            <img src="{% static 'img/plastic-bag.png' %}" width="50px">비닐봉지
+                        </button>
+                    </li>
                 </ul>
             </div>
         </li>
         <li>유리
             <div class="menu">
                 <ul class="sub">
-                    {% for item in glass %}
                     <li>
-                        <div class="add_btn">
-                            <button type="button" class="{{item.kwh}}"><img src="{{item.image.url}}"
-                                    width="50px">{{item.name}}</button>
-                        </div>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="유리병">
+                            <img src="{% static 'img/alcohol.png' %}" width="50px">유리병
+                        </button>
                     </li>
-                    {% endfor %}
+                    <li>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="와인병">
+                            <img src="{% static 'img/alcoholic-drink.png' %}" width="50px">와인병
+                        </button>
+                    </li>
                 </ul>
             </div>
         </li>
         <li>금속
             <div class="menu">
                 <ul class="sub">
-                    {% for item in metal %}
                     <li>
-                        <div class="add_btn">
-                            <button type="button" class="{{item.kwh}}"><img src="{{item.image.url}}"
-                                    width="50px">{{item.name}}</button>
-                        </div>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="알루미늄 캔">
+                            <img src="{% static 'img/can.png' %}" width="50px">알루미늄 캔
+                        </button>
                     </li>
-                    {% endfor %}
+                    <li>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="양철캔">
+                            <img src="{% static 'img/canned-food.png' %}" width="50px">양철캔
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="옷걸이">
+                            <img src="{% static 'img/clothes-hanger.png' %}" width="50px">옷걸이
+                        </button>
+                    </li>
                 </ul>
             </div>
         </li>
         <li>종이
             <div class="menu">
                 <ul class="sub">
-                    {% for item in paper %}
                     <li>
-                        <div class="add_btn">
-                            <button type="button" class="{{item.kwh}}"><img src="{{item.image.url}}"
-                                    width="50px">{{item.name}}</button>
-                        </div>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="박스">
+                            <img src="{% static 'img/box.png' %}" width="50px">박스
+                        </button>
                     </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </li>
-        <li>이외
-            <div class="menu">
-                <ul class="sub">
-                    {% for item in etc %}
                     <li>
-                        <div class="add_btn">
-                            <button type="button" class="{{item.kwh}}"><img src="{{item.image.url}}"
-                                    width="50px">{{item.name}}</button>
-                        </div>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="신문">
+                            <img src="{% static 'img/newspaper_2.png' %}" width="50px">신문
+                        </button>
                     </li>
-                    {% endfor %}
+                    <li>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="A4 용지">
+                            <img src="{% static 'img/paper_1.png' %}" width="50px">A4 용지
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="책">
+                            <img src="{% static 'img/paper_1.png' %}" width="50px">책
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="잡지">
+                            <img src="{% static 'img/paper_1.png' %}" width="50px">잡지
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="add_btn" onclick="addItem(this.id)" id="카탈로그">
+                            <img src="{% static 'img/paper_1.png' %}" width="50px">카탈로그
+                        </button>
+                    </li>
                 </ul>
             </div>
         </li>
@@ -86,40 +120,24 @@
 </div>
 <div class="peek__items">
     <div class="bucket">
-        <table class="item__table" border="0" cellspacing="0" cellpadding="0">
-            <tr bgcolor="#C8E3FF">
-                <th scope="col">&nbsp;</th>
-                <th scope="col">&nbsp;</th>
-                <th scope="col">수량</th>
-                <th scope="col">종류</th>
-                <th scope="col">&nbsp;</th>
-            </tr>
-            <tr align="center" class="good1">
-                <td><a href="#"><img src="{% static 'img/tumbler.png' %}" width="75" height="75" alt="텀블러" /></a></td>
-                <td>텀블러</td>
-                <td>1</td>
-                <td>고철</td>
-                <td><button type="button" title="삭제" class="btn_del">삭제</button></td>
-            </tr>
-            <tr align="center" class="good1">
-                <td><a href="#"><img src="{% static 'img/tumbler.png' %}" width="75" height="75" alt="텀블러" /></a></td>
-                <td>텀</td>
-                <td>1</td>
-                <td>철</td>
-                <td><button type="button" title="삭제" class="btn_del">삭제</button></td>
-            </tr>
-        </table>
-    </div>
-    <div class="total">
-        <h3>총 전력량</h3>
-        <!-- 임시로 해놓고 결과 확인 -->
-        <div class="show_total">
-            1000 kWh
-        </div>
-        <!-- 이 위까지는 없어질 친구덜 -->
-        <div id="result">
-            <button type="button" title="결과 확인하기" id="btn_result">결과 확인하기</button>
-        </div>
+        <form action="{% url 'calculator:home' %}" method="POST">
+            {% csrf_token %}
+            <table class="item__table" border="0" cellspacing="0" cellpadding="0" id="items_table">
+                <thead bgcolor="#C8E3FF">
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">수량</th>
+                    <th scope="col">종류</th>
+                    <th scope="col">&nbsp;</th>
+                </thead>
+                <tbody id='table-body'>
+                </tbody>
+            </table>
+            <div class="total">
+                <h3>얼마나 지구를 아껴줬을까?</h3>
+            </div>
+            <input type="submit" value="결과 확인하기">
+        </form>
     </div>
 </div>
 <script src="{% static 'js/script.js' %}"></script>

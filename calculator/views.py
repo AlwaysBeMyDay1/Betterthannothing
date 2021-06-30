@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from .models import item
 # Create your views here.
+from .calkwh import calculate as c
 
 
 def peek(request):
-    items_metal = item.objects.filter(type='metal')
-    items_glass = item.objects.filter(type='glass')
-    items_plastic = item.objects.filter(type='plastic')
-    items_paper = item.objects.filter(type='paper')
-    items_else = item.objects.filter(type='else')
-    return render(request, 'calculator/peek.html', {'metal': items_metal, 'glass': items_glass, 'plastic': items_plastic, 'paper': items_paper, 'etc': items_else})
+    if request.method == 'POST':
+        # 여기서 들어온 아이템을 (이름, 수량)의 튜플형태의 리스트로 변환해주고
+        # 그것을 c에 넣어서 새로운 창으로 연결시켜준다.
+        pass
+
+    return render(request, 'calculator/peek.html')
