@@ -439,3 +439,62 @@ ul.main {
   border-radius: 10px;
 
 }
+
+/* Profile */
+.profile{
+  width:100%;
+}
+
+.profile .bg{
+  width:100%;
+  height:200px;
+  background-color: var(--green-4--);
+  position: absolute;
+}
+
+.profile .profile_title p {
+  margin:0 auto;
+  font-weight: bolder;
+  font-size:36px;
+  position: relative;
+  top:175px;
+  background-color: white;
+  width:240px;
+  border-radius: 30px;
+}
+
+.profile .profile_content{
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  float:left;
+  padding: 0 320px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 250px;
+}
+
+.profile_content_img .img{
+  border-radius: 50%;
+  width:300px;
+  height:300px;
+  background-color: gray;
+}
+#profile_content_table{
+  border-collapse: separate;
+  border-spacing: 18px;
+  font-size:16px;
+}
+
+#profile_content_table .type{
+  background-color: var(--begie-2--);
+  color:var(--begie-5--);
+  border-radius: 50px;
+  width:100px;
+}
+#profile_content_table .content{
+  width:300px;
+  text-align: left;
+  padding-left:80px;
+}
