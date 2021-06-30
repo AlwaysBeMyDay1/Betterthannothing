@@ -3,19 +3,54 @@
 {{user.name}}님의 프로필
 {% endblock title %}
 {% block content %}
-{{user.name}}
-{{user.nickname}}
-{{user.email}}
-{{user.content}}
-{{user.milage}}
-{{user.level}}
-{% if user.gender is 0 %}
-남성
-{% endif %}
-{% if user.gender is 1 %}
-여성
-{% endif %}
-{% if user.gender is 2 %}
-숨김
-{% endif %}
+<div class="profile">
+    <div class="bg"></div>
+    <div class="profile_title">
+        <p>My Profile</p>
+    </div>
+    <div class="profile_content">
+        <div class="profile_content_img">
+            <div class="img">저는 여기에 현직님이 그리신 레벨 이미지가 들어갔으면 좋겠습니다..ㅎ</div>
+        </div>
+        <table id="profile_content_table">
+            <tr>
+                <td class="type">이름</td>
+                <td class="content">{{user.name}}</td>
+            </tr>
+            <tr>
+                <td class="type">닉네임</td>
+                <td class="content">{{user.nickname}}</td>
+            </tr>
+            <tr>
+                <td class="type">이메일</td>
+                <td class="content">{{user.email}}</td>
+            </tr>
+            <tr>
+                <td class="type">소개글</td>
+                <td class="content">{{user.content}}</td>
+            </tr>
+            <tr>
+                <td class="type">마일리지</td>
+                <td class="content">{{user.milage}}</td>
+            </tr>
+            <tr>
+                <td class="type">레벨</td>
+                <td class="content">{{user.level}}</td>
+            </tr>
+            <tr>
+                <td class="type">성별</td>
+                <td class="content">{% if user.gender is 0 %}
+                    남성
+                    {% endif %}
+                    {% if user.gender is 1 %}
+                    여성
+                    {% endif %}
+                    {% if user.gender is 2 %}
+                    숨김
+                    {% endif %}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
 {% endblock content %}
