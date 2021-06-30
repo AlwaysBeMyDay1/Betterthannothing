@@ -293,3 +293,98 @@ ul.main {
   background-color: #eefafd;
   ;
 }
+
+/* chhome */
+.chhome{
+  margin: 0%;
+}
+.chhome_title{
+  height: 50px;
+  margin: 0px 30px;
+}
+.chhome_chcon{
+  display: flex;
+  width: 1500px;
+  margin: 50px;
+}
+.chhome_left{
+  flex: 1;
+  margin: 20px 20px;
+}
+.chhome_right{
+  flex: 4;
+  padding: 0px 20px;
+}
+.chhome_chlist{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr;
+}
+.chhome_mych{
+
+  text-align: center;
+  border: 2px darkgreen solid;
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.chhome_mych ul{
+  padding: 0%;
+}
+.chhome_mych ul li{
+  text-align: center;
+
+}
+.chhome_chlank{
+  text-align: center;
+  border: 2px darkgreen solid;
+  margin-top: 20px;
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.chhome_chlank ul{
+  padding: 0%;
+}
+.chhome_chlank ul li{
+  text-align: center;
+}
+
+.chhome_chas{
+  width: 250px;
+  height: 300px;
+  margin: 20px;
+  padding: 0;
+  text-align: center;
+  border: 2px darkgreen solid;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.chimg{
+  flex:2;
+  border-radius: 70%;
+  overflow: hidden;
+}
+.chimg img{
+ max-width: 100px;
+ height: auto;
+}
+.chtext{
+  flex:2;
+  text-align: center;
+  padding-top: 20px;
+}
+.chhome_chas button{
+  flex:1;
+  background-color: rgb(178, 202, 137);
+  font-weight: bolder;
+  border-radius: 30px;
+  width: 150px;
+  height: 50px;
+  margin: auto;
+}
