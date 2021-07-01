@@ -1,6 +1,6 @@
 body {
     color: #555;
-    background: #eeeeee;
+    /* background: #eeeeee; */
     margin:0;
     padding: 0;
     box-sizing: border-box;}
@@ -40,14 +40,14 @@ body {
     border: 1px solid transparent;}
     
   label:hover {
-    color: #2e9cdf;
+    color: #2e7c46;
     cursor: pointer;}
     
   /* input 클릭시, label 스타일 */
   input:checked + label {
     color: #555;
     border: 1px solid #ddd;
-    border-top: 2px solid #2e9cdf;
+    border-top: 2px solid #2e7c46;
     border-bottom: 1px solid #ffffff;}
     
   #tab1:checked~#content1,
