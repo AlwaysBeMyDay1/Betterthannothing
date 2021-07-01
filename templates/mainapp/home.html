@@ -6,32 +6,37 @@ Better than Nothing
 
 {% block content %}
 {% load static%}
-<div class="main">
-    <p id="line1">오늘의 참여 수</p>
-    <div class="count">
-        <!-- 값 변경 -->
-        <p id="line2-1">1004</p>
-        <p id="line2-2">건</p>
-    </div>
-    <p id="line3">여러분의 참여로</p>
-    <div class="count__tree">
-        <p id="line4-1">오늘 하루 지구에 </p>
-        <!-- 값 변경 -->
-        <p id="line4-2">2</p>
-        <p id="line4-3">그루의 나무를 심었습니다.</p>
-    </div>
-
-</div>
-
-<div class="out">
-    <div class="tree">
-        <div class="trees">
-            <img id="tree1" src="{%static 'tree1.png'%}">
-            <img id="tree2" src="{%static 'tree2.png'%}">
+<div class="main_top">
+    <div class="main">
+        <p id="line1">오늘의 참여 수</p>
+        <div class="count">
+            <!-- 값 변경 -->
+            <p id="line2-1">1004</p>
+            <p id="line2-2">건</p>
+        </div>
+        <p id="line3">여러분의 참여로</p>
+        <div class="count__tree">
+            <p id="line4-1">오늘 하루 지구에 </p>
+            <!-- 값 변경 -->
+            <p id="line4-2">2</p>
+            <p id="line4-3">그루의 나무를 심었습니다.</p>
         </div>
     </div>
-    <div class="ground">
+
+    <div class="out">
+        <div class="tree">
+            <div class="trees">
+                <img id="tree1" src="{%static 'tree1.png'%}">
+                <img id="tree2" src="{%static 'tree2.png'%}">
+            </div>
+        </div>
+        <div class="ground">
+        </div>
     </div>
+</div>
+
+<div class="necessarity">
+    <img src="{% static 'necessarity.jpg' %}">
 </div>
 
 {% endblock content %}
