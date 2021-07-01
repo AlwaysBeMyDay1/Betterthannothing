@@ -5,10 +5,18 @@
 {% endblock title %}
 
 {% block content %}
-<h1>Login</h1>
-<form action="{% url 'common:login' %}" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="로그인">
-</form>
+<div class="login_container">
+    <div class="login_title">
+        <h1>BETTER THAN NOTHING</h1>
+    </div>
+    <div class="login_content">
+        <form action="{% url 'common:login' %}" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="login_content_submit">
+                <input type="submit" value="로그인" >
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock content %}
