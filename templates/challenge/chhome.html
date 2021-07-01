@@ -7,10 +7,6 @@ Challenges
 {% block content2 %}
 {% load static %}
 <div class="chhome">
-    <div class="chhome_title">
-        <h1>Better Than Nothing</h1>
-
-    </div>
     <div class="chhome_chcon">
         <div class="chhome_left">
             <div class="chhome_mych">
@@ -23,11 +19,11 @@ Challenges
             </div>
             <div class="chhome_chlank">
                 <p>인기 챌린지</p>
-                <ul>
+                <ol>
                     <li>용기내 챌린지</li>
                     <li>용기내 챌린지</li>
                     <li>용기내 챌린지</li>
-                </ul>
+                </ol>
             </div>
         </div>
         <div class="chhome_right">
@@ -35,7 +31,7 @@ Challenges
                 <div class="chhome_chas">
                     <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
                     <div class="chtext">
-                        <p>용기내</p>
+                        <p id="chname">용기내</p>
                         <p>10/100</p>
                     </div>
                     <button type="submit" id="info___button">참여하기</button>
@@ -43,7 +39,7 @@ Challenges
                 <div class="chhome_chas">
                     <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
                     <div class="chtext">
-                        <p>용기내</p>
+                        <p id="chname">용기내</p>
                         <p>10/100</p>
                     </div>
                     <button type="submit">참여하기</button>
@@ -51,7 +47,7 @@ Challenges
                 <div class="chhome_chas">
                     <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
                     <div class="chtext">
-                        <p>용기내</p>
+                        <p id="chname">용기내</p>
                         <p>10/100</p>
                     </div>
                     <button type="submit">참여하기</button>
@@ -59,7 +55,7 @@ Challenges
                 <div class="chhome_chas">
                     <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
                     <div class="chtext">
-                        <p>용기내</p>
+                        <p id="chname">용기내</p>
                         <p>10/100</p>
                     </div>
                     <button type="submit">참여하기</button>
@@ -67,7 +63,7 @@ Challenges
                 <div class="chhome_chas">
                     <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
                     <div class="chtext">
-                        <p>용기내</p>
+                        <p id="chname">용기내</p>
                         <p>10/100</p>
                     </div>
                     <button type="submit">참여하기</button>
@@ -75,15 +71,17 @@ Challenges
                 <div class="chhome_chas">
                     <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
                     <div class="chtext">
-                        <p>용기내</p>
+                        <p id="chname">용기내</p>
                         <p>10/100</p>
                     </div>
-                    <button type="submit">참여하기</button>
+                    <div class="join">
+                        <button type="submit">참여하기</button>
+                    </div>
                 </div>
                 <div class="chhome_chas">
                     <div class="chimg"><img src="{% static 'img/tumbler.png' %}"></div>
                     <div class="chtext">
-                        <p>용기내</p>
+                        <p id="chname">용기내</p>
                         <p>10/100</p>
                     </div>
                     <button type="submit">참여하기</button>
