@@ -12,7 +12,7 @@
 <canvas id="canvas">
 
 </canvas>
-<form action="" method="POST">
+<form action="{% url 'calculator:save' %}" method="POST">
     {% csrf_token %}
     <input type="hidden" name="kwh" value="{{kwh}}">
     <input type="hidden" name="co2" value="{{co2}}">
