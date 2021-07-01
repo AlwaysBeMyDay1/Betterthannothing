@@ -6,15 +6,17 @@
 {% endblock title %}
 
 {% block content %}
-{{kwh}}kWh를 아끼셨습니다!
+
+<p>오늘의 분리수거로 {{kwh}}kWh를 아끼셨습니다!</p>
 <canvas id="canvas">
 
 </canvas>
-<form action="" method="POST">
-    {% csrf_token %}
-    <input type="hidden" name="kwh" value="{{kwh}}">
-    <input type="submit" class="btn btn-success" value="결과 저장하기">
-</form>
-<br>
-<a class="btn btn-secondary" href="{% url 'calculator:home' %}">첫 화면으로</a>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="kwh" value="{{kwh}}">
+        <input type="submit" class="btn btn-success" value="결과 저장하기">
+    </form>
+    <a class="btn btn-secondary" href="{% url 'calculator:home' %}">첫 화면으로</a>
+
+
 {% endblock content %}
