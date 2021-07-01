@@ -14,5 +14,6 @@ def res(request):
     for pair in zip(namelist, numlist):
         recyclelist.append(pair)
     kwh = c(recyclelist)
-    context = {'kwh': kwh}
+    kgco2 = float(kwh) * 0.424
+    context = {'kwh': kwh, 'co2': kgco2}
     return render(request, 'calculator/result.html', context)

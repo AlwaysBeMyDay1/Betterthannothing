@@ -7,12 +7,15 @@
 
 {% block content %}
 {{kwh}}kWh를 아끼셨습니다!
+{{co2}}kg의 CO2 배출량을 줄이셨습니다!
+{{tree}}그루의 나무를 심은것과 같은 효과입니다.
 <canvas id="canvas">
 
 </canvas>
 <form action="" method="POST">
     {% csrf_token %}
     <input type="hidden" name="kwh" value="{{kwh}}">
+    <input type="hidden" name="co2" value="{{co2}}">
     <input type="submit" class="btn btn-success" value="결과 저장하기">
 </form>
 <br>
