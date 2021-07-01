@@ -42,7 +42,21 @@
             {% if user.is_authenticated %}
             <div class="user__profile">
                 <a href="{% url 'common:profile' user.id %}">
-                    <img src="{% static 'img/circle.png' %}">
+                    {% if user.level == 1 %}
+                    <img src="{% static 'img/level1.png' %}">
+                    {% endif %}
+                    {% if user.level == 2 %}
+                    <img src="{% static 'img/level2.png' %}">
+                    {% endif %}
+                    {% if user.level == 3 %}
+                    <img src="{% static 'img/level3.png' %}">
+                    {% endif %}
+                    {% if user.level == 4 %}
+                    <img src="{% static 'img/level4.png' %}">
+                    {% endif %}
+                    {% if user.level == 5 %}
+                    <img src="{% static 'img/level5.png' %}">
+                    {% endif %}
                 </a>
                 {{user.name}}
                 <a href="{% url 'common:logout' %}">로그아웃</a>
