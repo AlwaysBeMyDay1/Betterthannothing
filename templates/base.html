@@ -25,36 +25,39 @@
 
 <body>
     <header>
+        <div id="main_nav">
+            <div class="navbar_top">
+                <div class="title">
+                    <a href="{% url 'home'%}">
+                        <h1>Better than Nothing</h1>
+                    </a>
+                </div>
+                {% if user.is_authenticated %}
+                <div class="user__profile">
+                    <a href="{% url 'common:profile' user.id %}">
+                        <img src="{% static 'img/circle.png' %}">
+                    </a>
+                    {{user.name}}
+                    <a href="{% url 'common:logout' %}">로그아웃</a>
+                </div>
+                {% endif %}
 
-        <div class="navbar">
-            <div class="main__icon">
-                <a href="{% url 'home'%}">
-                    <img src="{% static 'img/sprout.png' %}">
-                </a>
-                <h1>Better than Nothing</h1>
+                {% if not user.is_authenticated %}
+                <div class="user__profile">
+                    <a href="{% url 'common:login' %}">로그인</a>
+                    <a href="{% url 'common:register' %}">회원가입</a>
+                </div>
+                {% endif %}
             </div>
-            <ul>
-                <li><a href="{% url 'instruction:way' %}"><img src="{% static 'img/tumbler.png' %}">오늘의 분리수거</a></li>
-                <li><a href="{% url 'calculator:home' %}"><img src="{% static 'img/lunch_box.png' %}">분리수거 계산기</a></li>
-                <li><a href="{% url 'challenge:chhome' %}"><img src="{% static 'img/cycle_box.png' %}">챌린지</a></li>
-                <li><a href=""><img src="{% static 'img/recycle.png' %}">환경을 생각하는 기업</a></li>
-            </ul>
-            {% if user.is_authenticated %}
-            <div class="user__profile">
-                <a href="{% url 'common:profile' user.id %}">
-                    <img src="{% static 'img/circle.png' %}">
-                </a>
-                {{user.name}}
-                <a href="{% url 'common:logout' %}">로그아웃</a>
+            <div class="nav_categories">
+                <ul>
+                    <li><a href="{% url 'instruction:way' %}"><img src="{% static 'img/tumbler.png' %}">분리수거 요령</a>
+                    </li>
+                    <li><a href="{% url 'calculator:home' %}"><img src="{% static 'img/lunch_box.png' %}">분리수거 계산기</a>
+                    </li>
+                    <li><a href="{% url 'challenge:chhome' %}"><img src="{% static 'img/cycle_box.png' %}">챌린지</a></li>
+                </ul>
             </div>
-            {% endif %}
-
-            {% if not user.is_authenticated %}
-            <div class="user__profile">
-                <a href="{% url 'common:login' %}">로그인</a>
-                <a href="{% url 'common:register' %}">회원가입</a>
-            </div>
-            {% endif %}
         </div>
     </header>
     <section id="container">
