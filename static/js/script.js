@@ -62,11 +62,11 @@ function deleteItem(clicked_id){
 function drawTree(numoftree){
     let ctx = document.getElementById('canvas').getContext('2d');
     let img = new Image();
-    img.src = 'static/img/tree1.png';
+    img.src = '/static/img/tree1.png';
     img.width = '30px';
     img.height='100px';
 
     for(var i = 0; i < numoftree; i++){
-        ctx.drawImage(img, i, i);
+        ctx.drawImage(img, i, i, 50, 50);
     }
 }
