@@ -9,15 +9,38 @@
 {{kwh}}kWh를 아끼셨습니다!<br>
 {{co2}}kg의 CO2 배출량을 줄이셨습니다!<br>
 연간 {{tree}}그루의 나무를 심은것과 같은 효과입니다.<br>
-<canvas id="canvas">
+<canvas id="canvas" width="500px" height="600px">
 
 </canvas>
 <form action="{% url 'calculator:save' %}" method="POST">
     {% csrf_token %}
     <input type="hidden" name="kwh" value="{{kwh}}">
     <input type="hidden" name="co2" value="{{co2}}">
+    <input type="hidden" name="tree" value="{{tree}}">
     <input type="submit" class="btn btn-success" value="결과 저장하기">
 </form>
 <br>
 <a class="btn btn-secondary" href="{% url 'calculator:home' %}">첫 화면으로</a>
+
+<script src="{% static 'js/script.js' %}"></script>
+<script>
+    function draw() {
+        var tree = new Image();
+        tree.src = "/static/img/tree1.png";
+        var num = Math.ceil(parseFloat(document.getElementsByName('tree')[0].value));
+        var ctx = document.getElementById('canvas').getContext('2d');
+        var nextX = 0;
+        var nextY = 0;
+        for (var i = 0; i < num; i++) {
+            ctx.drawImage(tree, nextX, nextY, 50, 50);
+            nextX += 50;
+            if (nextX >= 500) {
+                nextX = 0;
+                nextY += 50;
+            }
+        }
+    }
+    draw();
+
+</script>
 {% endblock content %}
