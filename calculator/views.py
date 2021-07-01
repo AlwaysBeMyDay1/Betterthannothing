@@ -15,6 +15,6 @@ def res(request):
         recyclelist.append(pair)
     kwh = c(recyclelist)
     kgco2 = float(kwh) * 0.424
-    tree = (kgco2 * 12) / 5.31 / 3000
+    tree = (kgco2 * 12) / (5.31 / 3000)
     context = {'kwh': kwh, 'co2': kgco2, 'tree': tree}
     return render(request, 'calculator/result.html', context)
